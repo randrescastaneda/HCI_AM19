@@ -1,0 +1,14 @@
+---
+title: "`r x[[3]]`"
+output: markdowntemplates::skeleton
+---
+
+# Example 1
+
+text go here: `r x[["hci_gap_mean"]]`
+
+`r x[["wbcode"]]`
+
+
+`r x[["wbcountryname"]]`
+

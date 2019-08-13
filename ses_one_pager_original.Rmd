@@ -1,0 +1,81 @@
+---
+title: "Ethiopia"
+author: "The state of inequality in human capital"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    fig_caption: yes
+    keep_tex: yes
+fontsize: 8pt
+geometry: "left=1.5cm,right=1cm,top=2cm,bottom=2.2cm"
+header-includes: \usepackage{fancyhdr} 
+  \usepackage{graphicx} 
+  \usepackage{eurosym} 
+  \usepackage{booktabs,xcolor} \pagestyle{fancy}
+  \rhead{October 2019}
+  \rfoot{}  
+  \lfoot{\includegraphics[width=19.5cm]{footerpdf.pdf}} 
+  \fancypagestyle{plain}{\pagestyle{fancy}} 
+  \pagenumbering{gobble}
+  \usepackage{pagecolor}
+  \pagecolor{white}
+  \usepackage{librebaskerville}
+  \usepackage[fontsize=8pt]{scrextend}
+  \usepackage{float}
+  \restylefloat{table}
+  \usepackage{xcolor}
+  \usepackage{multicol}
+  \newcommand{\hideFromPandoc}[1]{#1}
+  \hideFromPandoc{
+    \let\Begin\begin
+    \let\End\end
+  }
+  \usepackage{caption}
+  \captionsetup{skip=0pt}    
+---
+
+
+\definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
+\newcommand\boldblue[1]{\textcolor{bondiblue}{\textbf{#1}}}
+
+The launch of the Human Capital Index (HCI) in October 2018 underscored a huge gap in human capital outcomes across regions and income groups. As a measure of the relative productivity of the next generation of workers, the HCI shows the effectiveness of current investments and the readiness of a country to be competitive in an increasingly complex world with constantly changing nature of work. Equally important as a country's average distance from the frontier is how different socio-economic groups fare in terms of their relative future productivity. In a world where rising inequality is a critical policy issue, narrowing differences in human capital outcomes across socio-economic groups could be a way to facilitate economic mobility.
+
+This country profile presents the data on disaggregation of HCI and its components (**child survival, expected years of school, harmonized test scores and non-stunted rate**) by socio-economic status. The objective of this exercise is to look at differences within countries and is not meant to be comparable with the cross-country HCI values published earlier. While the exercise employs a similar methodology, it is different in that it excludes adult survival rate and is based on household survey based enrolment rates of children ages 6-17. The disaggregation is available for 51 countries. Given that human capital outcomes may not be uniquely increasing/decreasing across socio-economic groups, this country profile provides a comparison of the richest and poorest 20 percent of households.  
+
+\Begin{multicols}{2}
+
+### \boldblue{H\small{OW DOES THE POOREST 20 PERCENT FARE COMPARED TO THE RICHEST?}}###
+
+
+* **Human Capital Index (HCI).** In Ethiopia, the productivity as a future worker of a child born today in the richest 20 percent of households is **52 percent** while it is **39 percent** for a child born in the poorest 20 percent, a gap of **13** percentage points. This gap is smaller than the typical gap across the 51 countries (15 percentage points).  
+
+* **Probability of Survival to Age 5.** In Ethiopia, the probability of survival of a child born today in the richest 20 percent of households is **93 percent** while it is **91 percent** for a child born in the poorest 20 percent, a gap of **2** percentage points. This gap is smaller than the typical gap across the 51 countries (4 percentage points).  
+
+* **Expected Years of School.** In Ethiopia, a child in the richest 20 percent of households who starts school at age 6 can expect to complete **9.3** years of school by her 18th birthday while a child from the poorest 20 percent can expect to complete **5.9** years of school, a gap of **3.4 years** of school. This gap is larger than the typical gap across the 51 countries (2.4 years).
+
+* **Harmonized Test Scores.** Students from the richest 20 percent of households in Ethiopia score **388** while those from the poorest 20 percent score **347**, a gap of **41 points**. This gap is smaller than the typical gap across the 51 countries (56 points).
+
+* **Healthy Growth (Not Stunted Rate).** In Ethiopia, the percentage of children in the top 20 percent of households who are **not** stunted is **75 percent** while it is **55 percent** among the poorest 20 percent, a gap of **20 percentage points**. This gap is slightly larger han the typical gap across the 51 countries (19 percentage points).
+
+
+```{r out.width = "100%", fig.align = "right", echo=FALSE}
+knitr::include_graphics("ses_ETH.pdf")
+```
+
+
+\noindent\rule{9cm}{0.4pt}
+The Human Capital Project is a global effort to accelerate the amount and quality of investments in people. 
+&nbsp;
+
+
+For more information on the Human Capital Project, please visit **[www.worldbank.org/humancapitalproject](https://www.worldbank.org/humancapitalproject)**
+
+\begin{table}[H]
+\begin{tabular}{ll}
+\includegraphics[width=0.5cm]{twitter.png} & \#\textbf{invest}inPeople   \\
+\end{tabular}
+\end{table}
+
+
+
+\End{multicols}
