@@ -47,19 +47,20 @@ This country profile presents the data on disaggregation of HCI and its componen
 ### \boldblue{H\small{OW DOES THE POOREST 20 PERCENT FARE COMPARED TO THE RICHEST?}}###
 
 
-* **Human Capital Index (HCI).** In Ethiopia, the productivity as a future worker of a child born today in the richest 20 percent of households is **52 percent** while it is **39 percent** for a child born in the poorest 20 percent, a gap of **13** percentage points. This gap is smaller than the typical gap across the 51 countries (15 percentage points).  
+* `r x[["hci_text"]]`
 
-* **Probability of Survival to Age 5.** In Ethiopia, the probability of survival of a child born today in the richest 20 percent of households is **93 percent** while it is **91 percent** for a child born in the poorest 20 percent, a gap of **2** percentage points. This gap is smaller than the typical gap across the 51 countries (4 percentage points).  
+* `r x[["psurv_text"]]`
 
-* **Expected Years of School.** In Ethiopia, a child in the richest 20 percent of households who starts school at age 6 can expect to complete **9.3** years of school by her 18th birthday while a child from the poorest 20 percent can expect to complete **5.9** years of school, a gap of **3.4 years** of school. This gap is larger than the typical gap across the 51 countries (2.4 years).
+* `r x[["eyrs_text"]]`
 
-* **Harmonized Test Scores.** Students from the richest 20 percent of households in Ethiopia score **388** while those from the poorest 20 percent score **347**, a gap of **41 points**. This gap is smaller than the typical gap across the 51 countries (56 points).
+* `r x[["test_text"]]`
 
-* **Healthy Growth (Not Stunted Rate).** In Ethiopia, the percentage of children in the top 20 percent of households who are **not** stunted is **75 percent** while it is **55 percent** among the poorest 20 percent, a gap of **20 percentage points**. This gap is slightly larger han the typical gap across the 51 countries (19 percentage points).
+* `r x[["nostu_text"]]`
 
 
 ```{r out.width = "100%", fig.align = "right", echo=FALSE}
-knitr::include_graphics("ses_ETH.pdf")
+gr_file <- paste0("charts/ses_", x[["wbcode"]], ".pdf")
+knitr::include_graphics(gr_file)
 ```
 
 
