@@ -40,8 +40,8 @@
 
   hci <- haven::read_dta("input/hci_ses.dta")
 
-  countries <- NULL
   countries <- c("COL", "ETH")
+  countries <- NULL
   if (length(countries) > 0) {
     hci <-  hci[hci[["wbcode"]]  %in% countries, ]
   }
