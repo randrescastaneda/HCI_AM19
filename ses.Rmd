@@ -73,7 +73,7 @@ For more information on the Human Capital Project, please visit **[www.worldbank
 
 \begin{table}[H]
 \begin{tabular}{ll}
-\includegraphics[width=0.5cm]{twitter.png} & \#\textbf{invest}inPeople   \\
+\includegraphics[width=0.5cm]{static/twitter.png} & \#\textbf{invest}inPeople   \\
 \end{tabular}
 \end{table}
 
