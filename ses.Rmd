@@ -1,5 +1,5 @@
 ---
-title: "Ethiopia"
+title: "`r x[['wbcountrynamet']]`"
 author: "The state of inequality in human capital"
 output: 
   pdf_document:
@@ -8,17 +8,18 @@ output:
     keep_tex: yes
 fontsize: 8pt
 geometry: "left=1.5cm,right=1cm,top=2cm,bottom=2.2cm"
-header-includes: \usepackage{fancyhdr} 
+header-includes: 
+  \usepackage{fancyhdr} 
+  \pagestyle{fancy}
   \usepackage{graphicx} 
   \usepackage{eurosym} 
-  \usepackage{booktabs,xcolor} \pagestyle{fancy}
+  \usepackage{booktabs,xcolor}
   \rhead{October 2019}
   \rfoot{}  
-  \lfoot{\includegraphics[width=19.5cm]{footerpdf.pdf}} 
+  \lfoot{\includegraphics[width=19.5cm]{static/footerpdf.pdf}} 
   \fancypagestyle{plain}{\pagestyle{fancy}} 
   \pagenumbering{gobble}
-  \usepackage{pagecolor}
-  \pagecolor{white}
+  \usepackage[pagecolor={white}, nopagecolor={none}]{pagecolor}
   \usepackage{librebaskerville}
   \usepackage[fontsize=8pt]{scrextend}
   \usepackage{float}
@@ -33,7 +34,6 @@ header-includes: \usepackage{fancyhdr}
   \usepackage{caption}
   \captionsetup{skip=0pt}    
 ---
-
 
 \definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
 \newcommand\boldblue[1]{\textcolor{bondiblue}{\textbf{#1}}}
