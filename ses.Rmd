@@ -38,13 +38,15 @@ header-includes:
 \definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
 \newcommand\boldblue[1]{\textcolor{bondiblue}{\textbf{#1}}}
 
-The launch of the Human Capital Index (HCI) in October 2018 underscored a huge gap in human capital outcomes across regions and income groups. As a measure of the relative productivity of the next generation of workers, the HCI shows the effectiveness of current investments and the readiness of a country to be competitive in an increasingly complex world with constantly changing nature of work. Equally important as a country's average distance from the frontier is how different socio-economic groups fare in terms of their relative future productivity. In a world where rising inequality is a critical policy issue, narrowing differences in human capital outcomes across socio-economic groups could be a way to facilitate economic mobility.
+The launch of the World Bank Human Capital Index (HCI) in October 2018 highlighted large gaps in human capital outcomes across 157 countries around the world.  This global HCI shows how shortfalls in health and education among children today will reduce the productivity of the next generation of workers. 
 
-This country profile presents the data on disaggregation of HCI and its components (**child survival, expected years of school, harmonized test scores and non-stunted rate**) by socio-economic status. The objective of this exercise is to look at differences within countries and is not meant to be comparable with the cross-country HCI values published earlier. While the exercise employs a similar methodology, it is different in that it excludes adult survival rate and is based on household survey based enrolment rates of children ages 6-17. The disaggregation is available for 51 countries. Given that human capital outcomes may not be uniquely increasing/decreasing across socio-economic groups, this country profile provides a comparison of the richest and poorest 20 percent of households.  
+Gaps in human capital outcomes within countries across socioeconomic groups are large as well.  This country profile documents these within-country gaps using a newly-developed version of the HCI disaggregated by socioeconomic status.  It presents data on key indicators of human capital outcomes among the young (child survival, expected years of school, harmonized test scores, and the fraction of children under 5 who are not stunted) broken down by quintiles of socioeconomic status, together with a version of the HCI by quintiles, for 51 low- and middle-income countries.  
+
+This version of the HCI disaggregated by socioeconomic status uses the same general methodology as the global HCI, but uses different data sources in order to allow for this disaggregation, and so is not directly comparable with the global HCI.   For details on the data and methodology of the HCI disaggregated by socioeconomic status, see [INSERT TITLE AND LINK TO REPORT]  
 
 \Begin{multicols}{2}
 
-### \boldblue{H\small{OW DOES THE POOREST 20 PERCENT FARE COMPARED TO THE RICHEST?}}###
+### \boldblue{H\small{OW DO HUMAN CAPITAL OUTCOMES DIFFER BY SOCIOECONOMIC STATUS?}}###
 
 
 * `r x[["hci_text"]]`
