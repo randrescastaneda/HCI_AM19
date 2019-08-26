@@ -60,109 +60,7 @@ foreach j of varlist test_gap {
 gen `j'_diff=round((`j'-`j'_mean),1)
 }
 
-
-
-//EXPORTING RMARKDOWN TEXT
-
-///cond(exp, true, false)
-
-
-
-gen hci_gap_size = ///
-  cond(hci_gap_diff == -1, "slightly smaller than",   ///
-     cond(hci_gap_diff  < -1, "smaller than",           ///
-     cond(hci_gap_diff  >  1, "larger than",            ///
-     cond(hci_gap_diff == 1, "slightly larger than", ///
-           "about the same as"))))
-
-
-gen hci_text = " **Human Capital Index (HCI).** In " + wbcountryname +       ///
-", the productivity as a future worker of a child born today in the " + ///
-"richest 20 percent of households is **" + strofreal(round(hci_q5*100, 1)) ///
-+ " percent** while it is **" + strofreal(round(hci_q1*100, 1)) +     ///
-" percent** for a child born in the poorest 20 percent, a gap of **"  ///
-+strofreal(round(hci_gap*100, 1)) + "** percentage points. This gap " + ///
-"is " + hci_gap_size +  " the typical gap across the 51 countries (" ///
-+strofreal(round(hci_gap_mean*100, 1)) + " percentage points)."
-
-
-
-
-gen nostu_gap_size = ///
-  cond(nostu_gap_diff == -1, "slightly smaller than",   ///
-     cond(nostu_gap_diff  < -1, "smaller than",           ///
-     cond(nostu_gap_diff  >  1, "larger than",            ///
-     cond(nostu_gap_diff == 1, "slightly larger than", ///
-           "about the same as"))))
-
- 
-		   
-gen nostu_text=" **Healthy Growth (Not Stunted Rate).** In " + wbcountryname +  ///
-", the percentage of children in the top 20 percent of households who " +  ///
-"are not stunted is **" + strofreal(round(nostu_q5*100,1)) ///
-+ " percent** while it is **" + strofreal(round(nostu_q1*100,1)) +  ///
-" percent** among the poorest 20 percent, a gap of **"  ///
-+strofreal(round(nostu_gap*100,1)) + "** percentage points. This gap " + ///
-"is " + nostu_gap_size + " the typical gap across the 51 countries (" ///
- + strofreal(round(nostu_gap_mean*100,1))+ " percentage points)."	   
-		   
-		   
-		   
-gen psurv_gap_size = ///
-  cond(psurv_gap_diff == -1, "slightly smaller than",   ///
-     cond(psurv_gap_diff  < -1, "smaller than",           ///
-     cond(psurv_gap_diff  >  1, "larger than",            ///
-     cond(psurv_gap_diff == 1, "slightly larger than", ///
-           "about the same as"))))
-
-
-		   
-gen psurv_text=" **Probability of Survival to Age 5.** In " + wbcountryname + ///
-", the probability of survival of a child born today in the richest 20 percent" + ///
-" of households is **" + strofreal(round(psurv_q5*100, 1)) +  ///
-" percent** while it is **" +strofreal(round(psurv_q1*100,1)) + ///
-" percent** for a child born in the poorest 20 percent, a gap of **" ///
-+ strofreal(round(psurv_gap*100,1)) + "** percentage points. This gap " + ///
-"is " + psurv_gap_size + " the typical gap across the 51 countries ("  ///
-+ strofreal(round(psurv_gap_mean*100,1)) + "percentage points)."	   
-		   
-		   
-gen eyrs_gap_size = ///
-     cond(eyrs_gap_diff  <= -0.3, "smaller than",           ///
-     cond(eyrs_gap_diff  >= 0.3, "larger than",            ///
-           "about the same as"))
-
-	   
-gen eyrs_text=" **Expected Years of School.** In " + wbcountryname + ///
-", a child in the richest 20 percent of households who starts school at age 6" + ///
-" can expect to complete **" + strofreal(round(eyrs_q5, 0.1))+ ///
-" years** of school by her 18th birthday while a child from the poorest 20 percent" + ///
-" can expect to complete **" + strofreal(round(eyrs_q1,0.1)) + ///
-" years** of school, a gap of **" + strofreal(round(eyrs_gap, 0.1))+ ///
-" years** of school. This gap " + ///
-"is " + eyrs_gap_size + " the typical gap across the 51 countries (" ///
-+ strofreal(round(eyrs_gap_mean, 0.1)) + "years)."   
-		   
-
-
-	   
-gen test_gap_size = ///
-     cond(test_gap_diff  <= -5, "smaller than",           ///
-     cond(test_gap_diff  >= 5, "larger than",            ///
-           "about the same as"))
-
-	   
-		   
-gen test_text=" **Harmonized Test Scores.** Students from the richest 20 percent" + ///
-" of households in " + wbcountryname + ///
-" score **" + strofreal(round(test_q5,1))+ "** while those from the poorest 20 percent score **" ///
-+ strofreal(round(test_q1,1))+ ///
-"**, a gap of **" + strofreal(round(test_gap,1)) + " points** on a scale that ranges from 300 (minimal attaintment) to 625 (high attainment). This gap " + ///
-"is " + test_gap_size+ " the typical gap across the 51 countries (" ///
-+strofreal(round(test_gap_mean,1)) + "points)."
-	   
-
-	   
+///
 	   
 //Generate alternative country names for use in the title and body of the one-pager  
 	   
@@ -188,6 +86,109 @@ replace wbcountrynamet="West Bank and Gaza" if wbcode=="PSE"
 replace wbcountrynamet=wbcountryname if wbcountrynamet==""
 label var wbcountrynamet "country name for use in the title of the 1 pager"
 
+
+
+//EXPORTING RMARKDOWN TEXT
+
+///cond(exp, true, false)
+
+
+
+gen hci_gap_size = ///
+  cond(hci_gap_diff == -1, "slightly smaller than",   ///
+     cond(hci_gap_diff  < -1, "smaller than",           ///
+     cond(hci_gap_diff  >  1, "larger than",            ///
+     cond(hci_gap_diff == 1, "slightly larger than", ///
+           "about the same as"))))
+
+
+gen hci_text = " **Human Capital Index (HCI).** In " + wbcountrynameb +       ///
+", the productivity as a future worker of a child born today in the " + ///
+"richest 20 percent of households is **" + strofreal(round(hci_q5*100, 1)) ///
++ " percent** while it is **" + strofreal(round(hci_q1*100, 1)) +     ///
+" percent** for a child born in the poorest 20 percent, a gap of **"  ///
++strofreal(round(hci_gap*100, 1)) + "** percentage points. This gap " + ///
+"is " + hci_gap_size +  " the typical gap across the 51 countries (" ///
++strofreal(round(hci_gap_mean*100, 1)) + " percentage points)."
+
+
+
+
+gen nostu_gap_size = ///
+  cond(nostu_gap_diff == -1, "slightly smaller than",   ///
+     cond(nostu_gap_diff  < -1, "smaller than",           ///
+     cond(nostu_gap_diff  >  1, "larger than",            ///
+     cond(nostu_gap_diff == 1, "slightly larger than", ///
+           "about the same as"))))
+
+ 
+		   
+gen nostu_text=" **Healthy Growth (Not Stunted Rate).** In " + wbcountrynameb +  ///
+", the percentage of children in the top 20 percent of households who " +  ///
+"are not stunted is **" + strofreal(round(nostu_q5*100,1)) ///
++ " percent** while it is **" + strofreal(round(nostu_q1*100,1)) +  ///
+" percent** among the poorest 20 percent, a gap of **"  ///
++strofreal(round(nostu_gap*100,1)) + "** percentage points. This gap " + ///
+"is " + nostu_gap_size + " the typical gap across the 51 countries (" ///
+ + strofreal(round(nostu_gap_mean*100,1))+ " percentage points)."	   
+		   
+		   
+		   
+gen psurv_gap_size = ///
+  cond(psurv_gap_diff == -1, "slightly smaller than",   ///
+     cond(psurv_gap_diff  < -1, "smaller than",           ///
+     cond(psurv_gap_diff  >  1, "larger than",            ///
+     cond(psurv_gap_diff == 1, "slightly larger than", ///
+           "about the same as"))))
+
+
+		   
+gen psurv_text=" **Probability of Survival to Age 5.** In " + wbcountrynameb + ///
+", the probability of survival of a child born today in the richest 20 percent" + ///
+" of households is **" + strofreal(round(psurv_q5*100, 1)) +  ///
+" percent** while it is **" +strofreal(round(psurv_q1*100,1)) + ///
+" percent** for a child born in the poorest 20 percent, a gap of **" ///
++ strofreal(round(psurv_gap*100,1)) + "** percentage points. This gap " + ///
+"is " + psurv_gap_size + " the typical gap across the 51 countries ("  ///
++ strofreal(round(psurv_gap_mean*100,1)) + "percentage points)."	   
+		   
+		   
+gen eyrs_gap_size = ///
+     cond(eyrs_gap_diff  <= -0.3, "smaller than",           ///
+     cond(eyrs_gap_diff  >= 0.3, "larger than",            ///
+           "about the same as"))
+
+	   
+gen eyrs_text=" **Expected Years of School.** In " + wbcountrynameb + ///
+", a child in the richest 20 percent of households who starts school at age 6" + ///
+" can expect to complete **" + strofreal(round(eyrs_q5, 0.1))+ ///
+" years** of school by her 18th birthday while a child from the poorest 20 percent" + ///
+" can expect to complete **" + strofreal(round(eyrs_q1,0.1)) + ///
+" years** of school, a gap of **" + strofreal(round(eyrs_gap, 0.1))+ ///
+" years** of school. This gap " + ///
+"is " + eyrs_gap_size + " the typical gap across the 51 countries (" ///
++ strofreal(round(eyrs_gap_mean, 0.1)) + "years)."   
+		   
+
+
+	   
+gen test_gap_size = ///
+     cond(test_gap_diff  <= -5, "smaller than",           ///
+     cond(test_gap_diff  >= 5, "larger than",            ///
+           "about the same as"))
+
+	   
+		   
+gen test_text=" **Harmonized Test Scores.** Students from the richest 20 percent" + ///
+" of households in " + wbcountrynameb + ///
+" score **" + strofreal(round(test_q5,1))+ "** while those from the poorest 20 percent score **" ///
++ strofreal(round(test_q1,1))+ ///
+"**, a gap of **" + strofreal(round(test_gap,1)) + " points** on a scale that ranges from 300 (minimal attaintment) to 625 (high attainment). This gap " + ///
+"is " + test_gap_size+ " the typical gap across the 51 countries (" ///
++strofreal(round(test_gap_mean,1)) + "points)."
+	   
+
+	   
 
 save "input/hci_ses_toshare_`date'", replace
 save "input/hci_ses", replace
