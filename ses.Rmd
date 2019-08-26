@@ -1,6 +1,6 @@
 ---
 title: "`r x[['wbcountrynamet']]`"
-author: "The state of inequality in human capital"
+author: "Inequality in Human Capital Across Socioeconomic Groups"
 output: 
   pdf_document:
     latex_engine: xelatex
