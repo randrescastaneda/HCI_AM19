@@ -38,9 +38,9 @@ header-includes:
 \definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
 \newcommand\boldblue[1]{\textcolor{bondiblue}{\textbf{#1}}}
 
-The launch of the World Bank Human Capital Index (HCI) in October 2018 highlighted large gaps in human capital outcomes across 157 countries around the world.  This global HCI shows how shortfalls in health and education among children today will reduce the productivity of the next generation of workers. 
+The launch of the World Bank Human Capital Index (HCI) in October 2018 highlighted large gaps in human capital outcomes across 157 countries around the world.  The global HCI shows how shortfalls in health and education among children today will reduce the productivity of the next generation of workers. 
 
-Gaps in human capital outcomes within countries across socioeconomic groups are large as well.  This country profile documents these within-country gaps using a newly-developed version of the HCI disaggregated by socioeconomic status.  It presents data on key indicators of human capital outcomes among the young (child survival, expected years of school, harmonized test scores, and the fraction of children under 5 who are not stunted) broken down by quintiles of socioeconomic status, together with a version of the HCI by quintiles, for 51 low- and middle-income countries.  
+Gaps in human capital outcomes within countries across socioeconomic groups are large as well.  This country profile documents these within-country gaps using a newly-developed version of the HCI disaggregated by socioeconomic status.  It presents data on key indicators of human capital outcomes among children (child survival, expected years of school, harmonized test scores, and the fraction of children under 5 who are not stunted), together with a version of the HCI, broken down by quintiles of socioeconomic status, for 51 low- and middle-income countries.  
 
 This version of the HCI disaggregated by socioeconomic status uses the same general methodology as the global HCI, but uses different data sources in order to allow for this disaggregation, and so is not directly comparable with the global HCI.   For details on the data and methodology of the HCI disaggregated by socioeconomic status, see [INSERT TITLE AND LINK TO REPORT]  
 
