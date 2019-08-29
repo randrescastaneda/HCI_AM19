@@ -10,8 +10,8 @@ RunMD <- function(x) {
       input = "ses.Rmd",
       #input = "test/test.Rmd",
       output_format = "pdf_document",
-      output_file = paste0(file_name, ".pdf"),
-      output_dir = "output/",
+      output_file = paste0(file_name, "t_color.pdf"),
+      output_dir = "test/",
       intermediates_dir = "failed_log"
     )
 
@@ -40,6 +40,7 @@ hci <- haven::read_dta("input/hci_ses.dta")
 
 countries <- NULL
 countries <- c("ETH", "COL")
+countries <- c("ETH")
 if (length(countries) > 0) {
   hci <-  hci[hci[["wbcode"]]  %in% countries,]
 }

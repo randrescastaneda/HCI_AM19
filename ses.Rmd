@@ -19,7 +19,7 @@ header-includes:
   \lfoot{\includegraphics[width=19.5cm]{static/footerpdf.pdf}} 
   \fancypagestyle{plain}{\pagestyle{fancy}} 
   \pagenumbering{gobble}
-  \usepackage[pagecolor={white}, nopagecolor={none}]{pagecolor}
+  \usepackage{pagecolor}
   \usepackage{librebaskerville}
   \usepackage[fontsize=8pt]{scrextend}
   \usepackage{float}
@@ -35,7 +35,10 @@ header-includes:
   \captionsetup{skip=0pt}    
 ---
 
+
 \definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
+\definecolor{hciyellow}{RGB}{242, 226, 145}
+\pagecolor{hciyellow!25}
 \newcommand\boldblue[1]{\textcolor{bondiblue}{\textbf{#1}}}
 
 The launch of the World Bank Human Capital Index (HCI) in October 2018 highlighted large gaps in human capital outcomes across 157 countries around the world.  The global HCI shows how shortfalls in health and education among children today will reduce the productivity of the next generation of workers. 
