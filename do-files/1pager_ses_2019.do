@@ -1,8 +1,8 @@
 
 /*
-OBJECTIVE: GENERATE GRAPHS FOR ONE-PAGER ON SES DISSAGREGATED HCI
+OBJECTIVE: GENERATE GRAPHS AND STRINGS FOR ONE-PAGER ON SES DISSAGREGATED HCI
 AUTHOR: ZELALEM YILMA DEBEBE
-DATE: AUGUST 07 2019
+DATE: AUGUST 28 2019
 
 */
 
@@ -21,15 +21,12 @@ import excel using "input\SHCI_DataTable_27Aug2019.xlsx", firstrow clear  sheet(
 
 
 
-//use "input/hci_ses_toshare_19Jul2019.dta", clear 
 graph set window fontface "Baskerville Old Face"
 
 //preliminaries 
 egen latest=max(year), by(wbcode) //keep only the latest round of data for inequality assessment 
 drop if year!=latest
 
-//encode wbregion, gen(region)
-//encode wbincomegroup, gen(income)
 gen a=1 //scalar for twoway scatter 
 
 
@@ -208,7 +205,7 @@ gen test_text=" **Harmonized Test Scores.** Students from the richest 20 percent
 	   
 
  ///// String vars for source of data
-	   
+   
 	  
 	
 	
