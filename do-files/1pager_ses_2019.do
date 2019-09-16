@@ -10,7 +10,7 @@ clear
 set more off	
 set maxvar 32000
 
-global root "C:\Users\WB469563\OneDrive - WBG\Documents (zdebebe@worldbank.org)\OneDrive - WBG\Documents (zdebebe@worldbank.org)\Human Capital Project\HCI_AM19"
+global root "C:\Users\WB538904\OneDrive - WBG\HCI_AM19"
 global charts "${root}/charts"
 local outputfilepath "${root}/input"
 cd "${root}"
@@ -252,53 +252,51 @@ local test_source=test_source in `i'
 local nostu_source=nostu_source in `i'
 
 	
-		twoway (scatter a psurv_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(medthick))  /// 
-		(scatter a psurv_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(medthick)) ///
-		(scatter a psurv_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(medthick)) ///
-		(scatter a psurv_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(medthick)) ///
-		(scatter a psurv_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(medthick)) ///
+		twoway (scatter a psurv_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(vthick))  /// 
+		(scatter a psurv_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(vthick)) ///
+		(scatter a psurv_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(vthick)) ///
+		(scatter a psurv_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(vthick)) ///
+		(scatter a psurv_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(vthick)) ///
 		in `i', legend(off) title("Probability of Survival to Age 5", size(vlarge) pos(11)) subtitle("Source: `psurv_source'", size(small) pos(11)) xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(0.8 (0.05) 1,labsize(large)) 	
 		graph save psurv_`ctry', replace 
 		
 				
-		twoway (scatter a eyrs_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(medthick)) /// 
-		(scatter a eyrs_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(medthick)) ///
-		(scatter a eyrs_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(medthick)) ///
-		(scatter a eyrs_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(medthick)) ///
-		(scatter a eyrs_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(medthick)) ///
+		twoway (scatter a eyrs_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(vthick)) /// 
+		(scatter a eyrs_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(vthick)) ///
+		(scatter a eyrs_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(vthick)) ///
+		(scatter a eyrs_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(vthick)) ///
+		(scatter a eyrs_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(vthick)) ///
 		in `i', legend(off) title("Expected Years of School", size(vlarge) pos(11)) subtitle("Source: `eyrs_source'", size(small) pos(11)) xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(2 (2) 14,labsize(large)) 
 		graph save eyrs_`ctry', replace
 		
-		twoway (scatter a test_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(medthick)) /// 
-		(scatter a test_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(medthick)) ///
-		(scatter a test_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(medthick)) ///
-		(scatter a test_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(medthick)) ///
-		(scatter a test_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(medthick)) ///
+		twoway (scatter a test_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(vthick)) /// 
+		(scatter a test_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(vthick)) ///
+		(scatter a test_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(vthick)) ///
+		(scatter a test_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(vthick)) ///
+		(scatter a test_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(vthick)) ///
 		in `i', legend(off) title("Harmonized Test Scores", size(vlarge) pos(11)) subtitle("Source: `test_source'", size(small) pos(11)) xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(250 350 450 550 625,labsize(large)) 	
 		graph save test_`ctry', replace
 
 
-		twoway (scatter a nostu_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(medthick)) /// 
-		(scatter a nostu_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(medthick)) ///
-		(scatter a nostu_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(medthick)) ///
-		(scatter a nostu_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(medthick)) ///
-		(scatter a nostu_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(medthick)) ///
-		in `i', legend(off) title("Fraction of Children Under 5 Not Stunted", size(vlarge) pos(11)) subtitle("Source: `nostu_source'", size(small) pos(11)) xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(0.2 (0.2) 1,labsize(large)) 
+		twoway (scatter a nostu_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(vthick)) /// 
+		(scatter a nostu_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(vthick)) ///
+		(scatter a nostu_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(vthick)) ///
+		(scatter a nostu_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(vthick)) ///
+		(scatter a nostu_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(vthick)) ///
+		in `i', legend(label(1 "Poorest quintile") label(2 "Second quintile") label(3 "Third quintile") label(4 "Fourth quintile") label(5 "Richest quintile")) legend(order(1 2 3 4 5) pos(6)col(3) row(2)) title("Fraction of Children Under 5 Not Stunted", size(vlarge) pos(11)) subtitle("Source: `nostu_source'", size(small) pos(11)) xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(0.2 (0.2) 1,labsize(large)) 
 		graph save nostu_`ctry', replace
 
-       	twoway (scatter a hci_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(medthick)) /// 
-		(scatter a hci_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(medthick)) ///
-		(scatter a hci_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(medthick)) ///
-		(scatter a hci_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(medthick)) ///
-		(scatter a hci_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(medthick)) ///
+       	twoway (scatter a hci_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(vthick)) /// 
+		(scatter a hci_q2, msymbol(Oh) msize(huge) mcolor(orangebrown) mlwidth(vthick)) ///
+		(scatter a hci_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(vthick)) ///
+		(scatter a hci_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(vthick)) ///
+		(scatter a hci_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(vthick)) ///
 		in `i', legend(off) title("SES-Disaggregated Human Capital Index", size(vlarge) pos(11)) subtitle("Source: World Bank Staff Calculations", size(small) pos(11)) xtitle("") xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(0.2 (0.2) 1,labsize(large)) 
 		graph save hci_`ctry', replace
 		
 		
 	    graph combine hci_`ctry'.gph psurv_`ctry'.gph eyrs_`ctry'.gph test_`ctry'.gph nostu_`ctry'.gph  , colfirst rows(5) cols(1) ysize(6) xsize(4) graphregion(fcolor(white))  ///
-		title("{bf: HCI By Quintile of Socioeconomic Status}", suffix color(black) size(large) linegap(3) pos(11) span) /// 
-		note( ///
-		"{it:- Color code for quintiles (poorest=red, 2nd poorest=orange,}" "{it:middle=blue, 2nd richest=gray, richest=green)}", size (medium) color(gray))
+		title("{bf: HCI By Quintile of Socioeconomic Status}", suffix color(black) size(large) linegap(3) pos(11) span) 
 		graph export "$charts\ses_`ctry'.pdf", replace
 		graph save "$charts\ses_`ctry'", replace 
 
