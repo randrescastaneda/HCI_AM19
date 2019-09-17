@@ -49,8 +49,7 @@ This version of the HCI disaggregated by socioeconomic status uses the same gene
 
 \Begin{multicols}{2}
 
-### \boldblue{H\small{OW DO HUMAN CAPITAL OUTCOMES DIFFER BY SOCIOECONOMIC STATUS?}}###
-
+### \boldblue{H\small{OW DO HUMAN CAPITAL OUTCOMES DIFFER BY SOCIOECONOMIC STATUS?}}
 
 * `r x[["hci_text"]]`
 
@@ -68,11 +67,10 @@ gr_file <- paste0("charts/ses_", x[["wbcode"]], ".pdf")
 knitr::include_graphics(gr_file)
 ```
 
-
+\vspace{-5mm}
 \noindent\rule{9cm}{0.4pt}
 The Human Capital Project is a global effort to accelerate the amount and quality of investments in people. 
 &nbsp;
-
 
 For more information on the Human Capital Project, please visit **[www.worldbank.org/humancapitalproject](https://www.worldbank.org/humancapitalproject)**
 
@@ -81,7 +79,4 @@ For more information on the Human Capital Project, please visit **[www.worldbank
 \includegraphics[width=0.5cm]{static/twitter.png} & \#\textbf{invest}inPeople   \\
 \end{tabular}
 \end{table}
-
-
-
 \End{multicols}
