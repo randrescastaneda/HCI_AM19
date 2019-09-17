@@ -45,7 +45,7 @@ The launch of the World Bank Human Capital Index (HCI) in October 2018 highlight
 
 Gaps in human capital outcomes within countries across socioeconomic groups are large as well.  This country profile documents these within-country gaps using a newly-developed version of the HCI disaggregated by socioeconomic status.  It presents data on key indicators of human capital outcomes among children (child survival, expected years of school, harmonized test scores, and the fraction of children under 5 who are not stunted), together with a version of the HCI, broken down by quintiles of socioeconomic status, for 51 low- and middle-income countries.  
 
-This version of the HCI disaggregated by socioeconomic status uses the same general methodology as the global HCI, but uses different data sources in order to allow for this disaggregation, and so is not directly comparable with the global HCI.   For details on the data and methodology of the HCI disaggregated by socioeconomic status, see \textit{A Socioeconomic Disaggregation of the World Bank Human Capital Index (D'Souza, Gatti and Kraay, 2019)}.  
+This version of the HCI disaggregated by socioeconomic status uses the same general methodology as the global HCI, but uses different data sources in order to allow for this disaggregation, and so is not directly comparable with the global HCI.   For details on the data and methodology of the HCI disaggregated by socioeconomic status, see \textit{A Socioeconomic Disaggregation of the World Bank Human Capital Index}, by D'Souza, Gatti and Kraay (2019).  
 
 \Begin{multicols}{2}
 
