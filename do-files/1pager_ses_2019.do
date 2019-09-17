@@ -10,7 +10,7 @@ clear
 set more off	
 set maxvar 32000
 
-global root "C:\Users\WB538904\OneDrive - WBG\HCI_AM19"
+global root "C:\Users\WB538904\OneDrive - WBG\CHI_AM19_scorecard"
 global charts "${root}/charts"
 local outputfilepath "${root}/input"
 cd "${root}"
@@ -166,7 +166,7 @@ gen psurv_text=" **Probability of Survival to Age 5.** In " + wbcountrynameb + /
 " percent** for a child born in the poorest 20 percent, a gap of **" ///
 + strofreal(round(psurv_gap*100,1)) + "** percentage points. This gap " + ///
 "is " + psurv_gap_size + " the typical gap across the 51 countries ("  ///
-+ strofreal(round(psurv_gap_mean*100,1)) + "percentage points)."	   
++ strofreal(round(psurv_gap_mean*100,1)) + " percentage points)."	   
 		   
 		   
 gen eyrs_gap_size = ///
@@ -183,7 +183,7 @@ gen eyrs_text=" **Expected Years of School.** In " + wbcountrynameb + ///
 " years** of school, a gap of **" + strofreal(round(eyrs_gap, 0.1))+ ///
 " years** of school. This gap " + ///
 "is " + eyrs_gap_size + " the typical gap across the 51 countries (" ///
-+ strofreal(round(eyrs_gap_mean, 0.1)) + "years)."   
++ strofreal(round(eyrs_gap_mean, 0.1)) + " years)."   
 		   
 
 
@@ -201,7 +201,7 @@ gen test_text=" **Harmonized Test Scores.** Students from the richest 20 percent
 + strofreal(round(test_q1,1))+ ///
 "**, a gap of **" + strofreal(round(test_gap,1)) + " points** on a scale that ranges from 300 (minimal attaintment) to 625 (high attainment). This gap " + ///
 "is " + test_gap_size+ " the typical gap across the 51 countries (" ///
-+strofreal(round(test_gap_mean,1)) + "points)."
++strofreal(round(test_gap_mean,1)) + " points)."
 	   
 
  ///// String vars for source of data
