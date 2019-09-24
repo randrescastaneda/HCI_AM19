@@ -10,20 +10,21 @@ clear
 set more off	
 set maxvar 32000
 
-global root "C:\Users\WB538904\OneDrive - WBG\CHI_AM19_scorecard"
+global root "C:\Users\WB538904\OneDrive - WBG\HCI_AM19"
 global charts "${root}/charts"
 local outputfilepath "${root}/input"
 cd "${root}"
 
 local date: disp %tdCY-m-D date("`c(current_date)'", "DMY")
 disp "`date'"
-import excel using "input\SHCI_DataTable_27Aug2019.xlsx", firstrow clear  sheet("Sheet1")
+use "input\SHCI_DataTable_27Aug2019.dta"
 
 
 
 graph set window fontface "Baskerville Old Face"
 
 //preliminaries 
+drop if wbcountryname=="Brazil"
 egen latest=max(year), by(wbcode) //keep only the latest round of data for inequality assessment 
 drop if year!=latest
 
@@ -108,7 +109,7 @@ label var wbcountrynamet "country name for use in the title of the 1 pager"
 //EXPORTING RMARKDOWN TEXT
 ///cond(exp, true, false)
 
-
+gen hcirank_text = "" + wbcountrynamet + " was ranked "  + strofreal(round(hcirank, 1)) + " in the global HCI."
 
 gen hci_gap_size = ///
   cond(hci_gap_diff == -1, "slightly smaller than",   ///
@@ -118,7 +119,7 @@ gen hci_gap_size = ///
            "about the same as"))))
 
 
-gen hci_text = " **Human Capital Index (HCI).** In " + wbcountrynameb +       ///
+gen hci_text = " **SES-Disaggregated Human Capital Index (SES-HCI).** In " + wbcountrynameb +       ///
 ", the productivity as a future worker of a child born today in the " + ///
 "richest 20 percent of households is **" + strofreal(round(hci_q5*100, 1)) ///
 + " percent** while it is **" + strofreal(round(hci_q1*100, 1)) +     ///
@@ -199,7 +200,7 @@ gen test_text=" **Harmonized Test Scores.** Students from the richest 20 percent
 " of households in " + wbcountrynameb + ///
 " score **" + strofreal(round(test_q5,1))+ "** while those from the poorest 20 percent score **" ///
 + strofreal(round(test_q1,1))+ ///
-"**, a gap of **" + strofreal(round(test_gap,1)) + " points** on a scale that ranges from 300 (minimal attaintment) to 625 (high attainment). This gap " + ///
+"**, a gap of **" + strofreal(round(test_gap,1)) + " points** on a scale that ranges from 300 (minimal attainment) to 625 (high attainment). This gap " + ///
 "is " + test_gap_size+ " the typical gap across the 51 countries (" ///
 +strofreal(round(test_gap_mean,1)) + " points)."
 	   
@@ -239,7 +240,7 @@ save "input/hci_ses", replace
 *******************
 *******************SLIDER WITH PLOTPLAINBLIND COLOR OPTIONS CHOSEN 
 
-local x= 51 
+local x= 50 
 forvalues i=1/`x' {
 local year1=year in `i'
 local ctry=wbcode in `i'
@@ -288,7 +289,7 @@ local nostu_source=nostu_source in `i'
 		(scatter a hci_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(vthick)) ///
 		(scatter a hci_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(vthick)) ///
 		(scatter a hci_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(vthick)) ///
-		in `i', legend(off) title("SES-Disaggregated Human Capital Index", size(vlarge) pos(11)) subtitle("Source: World Bank Staff Calculations", size(small) pos(11)) xtitle("") xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(0.2 (0.2) 1,labsize(large)) 
+		in `i', legend(off) title("SES-Disaggregated Human Capital Index (SES-HCI)", size(vlarge) pos(11)) subtitle("Source: World Bank Staff Calculations", size(small) pos(11)) xtitle("") xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(0.2 (0.2) 1,labsize(large)) 
 		graph save hci_`ctry', replace
 		
 		
