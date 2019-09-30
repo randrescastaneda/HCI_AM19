@@ -281,7 +281,7 @@ local nostu_source=nostu_source in `i'
 		(scatter a nostu_q3, msymbol(Oh) msize(huge) mcolor(sky) mlwidth(vthick)) ///
 		(scatter a nostu_q4, msymbol(Oh) msize(huge) mcolor(eltgreen) mlwidth(vthick)) ///
 		(scatter a nostu_q5, msymbol(Oh) msize(huge) mcolor(green) mlwidth(vthick)) ///
-		in `i', legend(label(1 "Poorest quintile") label(2 "Second quintile") label(3 "Third quintile") label(4 "Fourth quintile") label(5 "Richest quintile")) legend(order(1 2 3 4 5) pos(6)col(3) row(2)) title("Fraction of Children Under 5 Not Stunted", size(vlarge) pos(11)) subtitle("Source: `nostu_source'", size(small) pos(11)) xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(0.2 (0.2) 1,labsize(large)) 
+		in `i', legend(label(1 "Poorest quintile") label(2 "2nd quintile") label(3 "3rd quintile") label(4 "4th quintile") label(5 "Richest quintile")) legend(order(1 2 3 4 5) pos(6)col(5) row(1) symxsize(*.7) symysize(*.5)) title("Fraction of Children Under 5 Not Stunted", size(vlarge) pos(11)) subtitle("Source: `nostu_source'", size(small) pos(11)) xtitle("") ytitle("") yscale(range(0 2)) ylabel(none) xlabel(,labsize(large)) xlabel(0.2 (0.2) 1,labsize(large)) 
 		graph save nostu_`ctry', replace
 
        	twoway (scatter a hci_q1, msymbol(Oh) msize(huge) mcolor(reddish) mlwidth(vthick)) /// 
