@@ -125,7 +125,7 @@ gen hci_text = " **SES-Disaggregated Human Capital Index (SES-HCI).** In " + wbc
 + " percent** while it is **" + strofreal(round(hci_q1*100, 1)) +     ///
 " percent** for a child born in the poorest 20 percent, a gap of **"  ///
 +strofreal(round(hci_gap*100, 1)) + "** percentage points. This gap " + ///
-"is " + hci_gap_size +  " the typical gap across the 51 countries (" ///
+"is " + hci_gap_size +  " the typical gap across the 50 countries (" ///
 +strofreal(round(hci_gap_mean*100, 1)) + " percentage points)."
 
 
@@ -146,7 +146,7 @@ gen nostu_text=" **Healthy Growth (Not Stunted Rate).** In " + wbcountrynameb + 
 + " percent** while it is **" + strofreal(round(nostu_q1*100,1)) +  ///
 " percent** among the poorest 20 percent, a gap of **"  ///
 +strofreal(round(nostu_gap*100,1)) + "** percentage points. This gap " + ///
-"is " + nostu_gap_size + " the typical gap across the 51 countries (" ///
+"is " + nostu_gap_size + " the typical gap across the 50 countries (" ///
  + strofreal(round(nostu_gap_mean*100,1))+ " percentage points)."	   
 		   
 		   
@@ -166,7 +166,7 @@ gen psurv_text=" **Probability of Survival to Age 5.** In " + wbcountrynameb + /
 " percent** while it is **" +strofreal(round(psurv_q1*100,1)) + ///
 " percent** for a child born in the poorest 20 percent, a gap of **" ///
 + strofreal(round(psurv_gap*100,1)) + "** percentage points. This gap " + ///
-"is " + psurv_gap_size + " the typical gap across the 51 countries ("  ///
+"is " + psurv_gap_size + " the typical gap across the 50 countries ("  ///
 + strofreal(round(psurv_gap_mean*100,1)) + " percentage points)."	   
 		   
 		   
@@ -183,7 +183,7 @@ gen eyrs_text=" **Expected Years of School.** In " + wbcountrynameb + ///
 " can expect to complete **" + strofreal(round(eyrs_q1,0.1)) + ///
 " years** of school, a gap of **" + strofreal(round(eyrs_gap, 0.1))+ ///
 " years** of school. This gap " + ///
-"is " + eyrs_gap_size + " the typical gap across the 51 countries (" ///
+"is " + eyrs_gap_size + " the typical gap across the 50 countries (" ///
 + strofreal(round(eyrs_gap_mean, 0.1)) + " years)."   
 		   
 
@@ -201,7 +201,7 @@ gen test_text=" **Harmonized Test Scores.** Students from the richest 20 percent
 " score **" + strofreal(round(test_q5,1))+ "** while those from the poorest 20 percent score **" ///
 + strofreal(round(test_q1,1))+ ///
 "**, a gap of **" + strofreal(round(test_gap,1)) + " points** on a scale that ranges from 300 (minimal attainment) to 625 (high attainment). This gap " + ///
-"is " + test_gap_size+ " the typical gap across the 51 countries (" ///
+"is " + test_gap_size+ " the typical gap across the 50 countries (" ///
 +strofreal(round(test_gap_mean,1)) + " points)."
 	   
 
