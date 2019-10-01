@@ -116,7 +116,7 @@ label var wbcountrynamet "country name for use in the title of the 1 pager"
 //EXPORTING RMARKDOWN TEXT
 ///cond(exp, true, false)
 
-gen hcirank_text = "" + wbcountrynamet + " was ranked "  + strofreal(round(hcirank, 1)) + " in the global HCI."
+gen hcirank_text = "" + wbcountrynamet + " was ranked "  + strofreal(round(hcirank, 1)) + " out of 157 countries in the global HCI."
 
 gen hci_gap_size = ///
 cond(hci_gap_diff == -1, "slightly smaller than",   ///
