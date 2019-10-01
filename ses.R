@@ -7,10 +7,10 @@ RunMD <- function(x) {
 
   result <-  tryCatch({
     rmarkdown::render(
-      input = "ses.Rmd",
+      input = "ses2.Rmd",
       #input = "test/test.Rmd",
       output_format = "pdf_document",
-      output_file = paste0(file_name, ".pdf"),
+      output_file = paste0(file_name, "2.pdf"),
       output_dir = "test/",
       intermediates_dir = "failed_log"
     )
@@ -39,8 +39,8 @@ RunMD <- function(x) {
 hci <- haven::read_dta("input/hci_ses.dta")
 
 countries <- c("ETH", "COL")
-countries <- c("ETH")
 countries <- NULL
+countries <- c("ETH")
 if (length(countries) > 0) {
   hci <-  hci[hci[["wbcode"]]  %in% countries,]
 }

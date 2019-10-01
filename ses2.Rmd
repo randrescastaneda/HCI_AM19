@@ -1,0 +1,79 @@
+---
+title: "`r x[['wbcountrynamet']]`"
+author: "Insights from Disaggregating the Human Capital Index "
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    fig_caption: yes
+    keep_tex: yes
+fontsize: 8pt
+geometry: "left=1.9cm,right=1.9cm,top=2.63cm,bottom=2.2cm"
+header-includes: 
+  \usepackage{fancyhdr} 
+  \fancyhf{}
+  \usepackage{graphicx} 
+  \usepackage{eurosym} 
+  \usepackage{booktabs,xcolor}
+  \pagenumbering{gobble}
+  \usepackage{pagecolor}
+  \usepackage{librebaskerville}
+  \usepackage[fontsize=8pt]{scrextend}
+  \usepackage{float}
+  \restylefloat{table}
+  \usepackage{xcolor}
+  \usepackage{multicol}
+  \newcommand{\hideFromPandoc}[1]{#1}
+  \hideFromPandoc{
+    \let\Begin\begin
+    \let\End\end
+  }
+  \usepackage{caption}
+  \captionsetup{skip=0pt}    
+---
+
+
+\definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
+\definecolor{hciyellow}{RGB}{242, 226, 145}
+\pagecolor{hciyellow!25}
+\newcommand\boldblue[1]{\textcolor{bondiblue}{\textbf{#1}}}
+
+The launch of the World Bank Human Capital Index (HCI) in October 2018 highlighted large gaps in human capital outcomes across 157 countries around the world.  The global HCI shows how shortfalls in health and education among children today will reduce the productivity of the next generation of workers. `r x[["hcirank_text"]]`
+
+Gaps in human capital outcomes within countries across socioeconomic groups are large as well.  This country profile documents these within-country gaps using a newly-developed version of the HCI disaggregated by socioeconomic status (SES-HCI).  It presents data on key indicators of human capital outcomes among children (child survival, expected years of school, harmonized test scores, and the fraction of children under 5 who are not stunted), together with a version of the SES-HCI, for 50 low- and middle-income countries where data are available.  
+
+This version of the SES-HCI relies on the same general methodology as the global HCI, but uses different data sources in order to allow for this disaggregation, and so is not directly comparable with the global HCI.   For details on the data and methodology of the SES-HCI, see \textit{A Socioeconomic Disaggregation of the World Bank Human Capital Index}, by D'Souza, Gatti and Kraay (2019).  
+
+\Begin{multicols}{2}
+
+### \boldblue{H\small{OW DO HUMAN CAPITAL OUTCOMES DIFFER BY \\*
+SOCIOECONOMIC STATUS?}}
+
+* `r x[["hci_text"]]`
+
+* `r x[["psurv_text"]]`
+
+* `r x[["eyrs_text"]]`
+
+* `r x[["test_text"]]`
+
+* `r x[["nostu_text"]]`
+
+
+```{r out.width = "100%", fig.align = "right", echo=FALSE}
+gr_file <- paste0("charts/ses_", x[["wbcode"]], ".pdf")
+knitr::include_graphics(gr_file)
+```
+
+\vspace{-5mm}
+\noindent\rule{9cm}{0.4pt}
+The Human Capital Project is a global effort to accelerate the amount and quality of investments in people. 
+&nbsp;
+
+For more information on the Human Capital Project, please visit **[www.worldbank.org/humancapitalproject](https://www.worldbank.org/humancapitalproject)**
+
+\begin{table}[H]
+\begin{tabular}{ll}
+\includegraphics[width=0.5cm]{static/twitter.png} & \#\textbf{invest}inPeople   \\
+\end{tabular}
+\end{table}
+\End{multicols}
