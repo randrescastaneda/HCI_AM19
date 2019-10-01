@@ -14,7 +14,7 @@ header-includes:
   \usepackage{graphicx} 
   \usepackage{eurosym} 
   \usepackage{booktabs,xcolor}
-  \rhead{October 2019}
+  \rhead{Human Capital Project - \today}
   \rfoot{}  
   \lfoot{\includegraphics[width=19.5cm]{static/footerpdf.pdf}} 
   \fancypagestyle{plain}{\pagestyle{fancy}} 
@@ -45,7 +45,7 @@ The launch of the World Bank Human Capital Index (HCI) in October 2018 highlight
 
 Gaps in human capital outcomes within countries across socioeconomic groups are large as well.  This country profile documents these within-country gaps using a newly-developed version of the HCI disaggregated by socioeconomic status (SES-HCI).  It presents data on key indicators of human capital outcomes among children (child survival, expected years of school, harmonized test scores, and the fraction of children under 5 who are not stunted), together with a version of the SES-HCI, for 50 low- and middle-income countries where data are available.  
 
-This version of the SES-HCI relies on the same general methodology as the global HCI, but uses different data sources in order to allow for this disaggregation, and so is not directly comparable with the global HCI.   For details on the data and methodology of theSES-HCI, see \textit{A Socioeconomic Disaggregation of the World Bank Human Capital Index}, by D'Souza, Gatti and Kraay (2019).  
+This version of the SES-HCI relies on the same general methodology as the global HCI, but uses different data sources in order to allow for this disaggregation, and so is not directly comparable with the global HCI.   For details on the data and methodology of the SES-HCI, see \textit{A Socioeconomic Disaggregation of the World Bank Human Capital Index}, by D'Souza, Gatti and Kraay (2019).  
 
 \Begin{multicols}{2}
 
