@@ -2,17 +2,32 @@
 #   Sub Functions
 #----------------------------------------------------------
 
-RunMD <- function(x) {
-  file_name <- paste0("ses_", x[["wbcode"]])
+RunMD <- function(x, ver = "s") {
+
+  if (!(ver  %in% c("s", "b"))) {
+    stop("You must select either `version` = 's' or 'b'")
+  }
+
+  if (ver == "s") {
+    prefix <- "ses_"
+    input <-  "ses.Rmd"
+    output_dir <- "output/"
+  } else {
+    prefix <- "ses_book_"
+    input <-  "ses_book.Rmd"
+    output_dir <- "book/"
+  }
+
+
+  file_name <- paste0(prefix, x[["wbcode"]])
 
   result <-  tryCatch({
     rmarkdown::render(
-      input = "ses2.Rmd",
-      #input = "test/test.Rmd",
+      input = input,
       output_format = "pdf_document",
-      output_file = paste0(file_name, "2.pdf"),
-      output_dir = "test/",
-      intermediates_dir = "failed_log"
+      output_file = paste0(file_name, ".pdf"),
+      intermediates_dir = "failed_log",
+      output_dir = output_dir
     )
 
     r <- c(x[["wbcode"]], "OK")
@@ -39,13 +54,13 @@ RunMD <- function(x) {
 hci <- haven::read_dta("input/hci_ses.dta")
 
 countries <- c("ETH", "COL")
-countries <- NULL
 countries <- c("ETH")
+countries <- NULL
 if (length(countries) > 0) {
   hci <-  hci[hci[["wbcode"]]  %in% countries,]
 }
 
-y <- apply(hci, 1, RunMD)
+y <- apply(hci, 1, RunMD, ver = "b")
 
 
 #----------------------------------------------------------
@@ -55,11 +70,17 @@ y <- apply(hci, 1, RunMD)
 
 #--------- copy pdf files and delete them from root
 
-pdf_file <- list.files(pattern = "ses_.+\\.pdf$")
+pdf_file <- list.files(pattern = "ses_[A-Z]+\\.pdf$")
+pdf_book <- list.files(pattern = "ses_book_[A-Z]+\\.pdf$")
+
 x <- file.copy(from = pdf_file, to = "output", overwrite = TRUE)
+y <- file.copy(from = pdf_book, to = "book", overwrite = TRUE)
 
 pdf_file <- pdf_file[x]
+pdf_book <- pdf_book[y]
+
 file.remove(pdf_file)
+file.remove(pdf_book)
 
 #--------- copy failed log files
 
