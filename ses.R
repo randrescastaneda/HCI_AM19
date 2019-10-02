@@ -60,7 +60,7 @@ if (length(countries) > 0) {
   hci <-  hci[hci[["wbcode"]]  %in% countries,]
 }
 
-y <- apply(hci, 1, RunMD, ver = "b")
+y <- apply(hci, 1, RunMD, ver = "s")
 
 
 #----------------------------------------------------------
