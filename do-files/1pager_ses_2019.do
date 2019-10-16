@@ -93,7 +93,7 @@ gen wbcountrynameb=""
 replace wbcountrynameb="the Comoros" if wbcode=="COM"
 replace wbcountrynameb="the Democratic Republic of Congo" if wbcode=="COD"
 replace wbcountrynameb="the Republic of Congo" if wbcode=="COG"
-replace wbcountrynameb="the Arabic Republic of Egypt" if wbcode=="EGY"
+replace wbcountrynameb="the Arab Republic of Egypt" if wbcode=="EGY"
 replace wbcountrynameb="the Gambia" if wbcode=="GMB"
 replace wbcountrynameb="the Kyrgyz Republic" if wbcode=="KGZ"
 replace wbcountrynameb="the West Bank and Gaza" if wbcode=="PSE"
@@ -104,7 +104,7 @@ gen wbcountrynamet=""
 replace wbcountrynamet="Comoros" if wbcode=="COM"
 replace wbcountrynamet="The Democratic Republic of Congo" if wbcode=="COD"
 replace wbcountrynamet="The Republic of Congo" if wbcode=="COG"
-replace wbcountrynamet="The Arabic Republic of Egypt" if wbcode=="EGY"
+replace wbcountrynamet="The Arab Republic of Egypt" if wbcode=="EGY"
 replace wbcountrynamet="The Gambia" if wbcode=="GMB"
 replace wbcountrynamet="Kyrgyz Republic" if wbcode=="KGZ"
 replace wbcountrynamet="West Bank and Gaza" if wbcode=="PSE"
@@ -243,7 +243,7 @@ save "input/hci_ses_toshare_`date'", replace
 save "input/hci_ses", replace
 
 
-
+exit
 *******************
 *******************SLIDER WITH PLOTPLAINBLIND COLOR OPTIONS CHOSEN 
 
