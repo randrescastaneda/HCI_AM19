@@ -10,6 +10,9 @@ clear
 set more off	
 set maxvar 32000
 
+if ( lower("`c(username)'") == "wb469563") {
+	global root "C:\Users\WB469563\OneDrive - WBG\Documents (zdebebe@worldbank.org)\OneDrive - WBG\Documents (zdebebe@worldbank.org)\Human Capital Project\HCI_AM19"
+}
 
 if (lower("`c(username)'") == "wb538904") {
 	global root "C:\Users\WB538904\OneDrive - WBG\HCI_AM19"
@@ -243,7 +246,7 @@ save "input/hci_ses_toshare_`date'", replace
 save "input/hci_ses", replace
 
 
-exit
+
 *******************
 *******************SLIDER WITH PLOTPLAINBLIND COLOR OPTIONS CHOSEN 
 
