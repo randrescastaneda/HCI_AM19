@@ -54,13 +54,13 @@ RunMD <- function(x, ver = "s") {
 hci <- haven::read_dta("input/hci_ses.dta")
 
 countries <- c("ETH", "COL")
-countries <- c("ETH")
 countries <- NULL
+countries <- c("EGY")
 if (length(countries) > 0) {
   hci <-  hci[hci[["wbcode"]]  %in% countries,]
 }
 
-y <- apply(hci, 1, RunMD, ver = "s")
+y <- apply(hci, 1, RunMD, ver = "b")
 
 
 #----------------------------------------------------------
